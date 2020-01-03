@@ -1,0 +1,113 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background-image: url("./background-jungle.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.game-board {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 800px;
+  max-width: 800px;
+  background: none;
+  transform: translate(-50%, -50%);
+  outline: none;
+  border: none;
+}
+
+canvas {
+  background : rgba(31,31,31,0.90);
+  float: left;
+  position: relative;
+  /* with multiple color stop lengths */
+  -webkit-box-shadow: 2px 3px 17px 2px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 2px 3px 17px 2px rgba(0, 0, 0, 0.75);
+  box-shadow: 2px 3px 17px 2px rgba(0, 0, 0, 0.75);
+}
+
+.menu-bar {
+  border-radius: 20px;
+  background: #238d5d;
+  float: right;
+  max-width: 180px;
+  width: 180px;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: Verdana;
+  position: relative;
+}
+
+[name='play-btn'] {
+    background: whitesmoke;
+    position: relative;
+    width: 130px;
+    height: 70px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    border-radius: 20px;
+    outline: none;
+    border : 3px solid #396E1A;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: 600;
+    transform: scale(0.9);
+    color : rgb(11, 11, 11);
+}
+[name='play-btn']:hover {
+    transform: scale(1);
+    background: white;
+    transition : 0.3s all ease;
+}
+.score-bar {
+    width: 150px;
+    text-align: center;
+    font-weight: 600;
+    border-radius: 5px;
+    background: whitesmoke;
+    height: 50px;
+    position: relative;
+    display: block;
+    margin-top: 25px;
+}
+
+.score-bar .title {
+    position: absolute;
+    top: -25px;
+    left : 0;
+    width: 100%;
+    font-size: 18px;
+    text-align: center;
+}
+
+.score-bar .scored {
+    position: absolute;
+    top : 50%;
+    left : 50%;
+    transform: translate(-50%, -50%);
+    font-size: 18px;
+    text-align: center;
+    color : rgb(22, 22, 22);
+    transition: 0.3s all ease;
+}
+
+.score-bar .scored.adding{
+  color :green;
+  font-size: 25px;
+  transition: 0.3s linear;
+  transform-origin: center;
+}

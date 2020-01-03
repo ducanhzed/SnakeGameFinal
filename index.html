@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Snake Game</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="game-board">
+        <canvas id="my-canvas" width="600" height="600"></canvas>
+        <div class="menu-bar">
+            <button name="play-btn">Start</button>
+            <div class="checkbox">
+                <label for="mode1">Through Wall</label>
+                <input name="mode1" type="checkbox" checked>
+                <br>
+                <label for="mode2">Dead Wall</label>
+                <input type="checkbox" name="mode2">
+            </div>
+            
+            <section class="score-bar">
+                <span class="title">YOUR SCORES</span>
+                <span class="scored">0</span>
+            </section>
+        </div>
+    </div>
+    <script src="snake.js"></script>
+    <script src="index.js"></script>
+</body>
+
+</html>
